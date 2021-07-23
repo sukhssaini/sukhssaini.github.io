@@ -1,21 +1,53 @@
 <html>
+    <head>
+        <title>Napa Cross Canada</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+        <script src="./data.js"></script>
+        <script src="./main2.js"></script>
+    </head>
+    <body>
 
-<head>
-    <meta name="google-site-verification" content="IVI0UGx-f8O31IqcyvrEV0Ksa1MqI0ic034W4YZSmN4" />
-    <title>Sukh</title>
-</head>
+        <div class="container">
+            <div class="row" style="padding-top: 4%;padding-bottom: 4%;">
+                <div class="col-md-3">
+                    <span></span>
+                    <select class="form-select form-select-lg mb-3" id="years" name="years"></select>
+                </div>
+                <div class="col-md-3">
+                    Make : <select id="makes" name="makes"></select>
+                </div>
+                <div class="col-md-3">
+                    Model: <select id="models" name="models"></select>
+                </div>
 
-<body>
-    <p>
-        <h2>Sukhwinder Singh</h2>
-    </p>
-    <p>I am Software engineer who loves to watch anime and reading manga.</p>
-    <p>Apart from my passion for anime, I love coding.</p>
-    <p>I have worked with Node JS, Vue js, React (not much), C# and python.</p>
-    <p>But lately, javascript have peaked my Interest lets see how it goes.</p>
-    <p>Want to know more contact me at
-        <a href="mailto:sainisukha88@gmail.com">sainisukha88@gmail.com</a>
-    </p>
-</body>
+            </div>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg  ">
+                        <table id="example" class="display nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>PartNumber</th>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+            </div>
+        </div>
+
+
+
+        
+        
+
+        
+    </body>
 </html>
