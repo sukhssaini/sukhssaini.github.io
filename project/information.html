@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Napa Cross Canada</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+        <script src="./data.js"></script>
+    </head>
+    <body>
+
+        <div style="display:flex; justify-content: center">
+          <img id="image" src="" />
+        </div>
+        
+
+        <div class="container" style="padding: 30px;">
+            <div class="col-lg">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Part Number</h6>
+                      </div>
+                      <div id="partNumber" class="col-sm-9 text-secondary">
+                        
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Name</h6>
+                      </div>
+                      <div id="partName" class="col-sm-9 text-secondary">
+                        
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Price</h6>
+                      </div>
+                      <div id="partPrice" class="col-sm-9 text-secondary">
+                        
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Comments</h6>
+                      </div>
+                      <div id="partComments" class="col-sm-9 text-secondary">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg  ">
+                        <table id="example" class="display nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+            </div>
+        </div>
+
+        <script src="./partdisplay.js"></script>
+        
+    </body>
+</html>
