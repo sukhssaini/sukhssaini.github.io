@@ -1,0 +1,41 @@
+<html>
+</head></head>
+<body>
+<center>
+<br><br><br>
+<input id="percentage" placeholder="0.3"></input>
+<br><br><br><br>
+<input id="base" placeholder="enter value"></input>
+<br><br><br><br>
+<button onclick="calc();" id="calc">Calculate</button>
+
+<br>
+<h4 id="result">result</h4>
+
+<script>
+
+var calc = function() {
+	var percentage = document.getElementById("percentage").value;
+	var base = document.getElementById("base").value;
+	var resultText = document.getElementById("result");
+
+	percentage = parseFloat(percentage);
+	base = parseFloat(base);
+
+
+	var a = base+(base * percentage);
+
+	var result = [ base, a, ( a + (a*percentage)) ];
+
+	resultText.innerHTML = result.toString().replaceAll(',','<br>');
+}
+
+
+btn = document.getElementById('calc')
+btn.click = calc;
+
+
+</script>
+</center>
+</body>
+</html>
