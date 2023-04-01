@@ -1,16 +1,67 @@
 <html>
-</head></head>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+
+.inputfix {
+ width: 20%;
+ text-align:center
+}
+
+.width50{
+ width:50%
+}
+
+.width20{
+ width: 20px;
+ text-align:center
+}
+
+.displaynone{
+ display:none;
+}
+
+</style>
+
+</head>
 <body>
 <center>
 <br><br><br>
-<input id="percentage" placeholder="0.3"></input>
+<input class="form-control inputfix" id="percentage" value="0.3"></input>
 <br><br><br><br>
-<input id="base" placeholder="enter value"></input>
+<input class="form-control inputfix" id="base" placeholder="enter value"></input>
 <br><br><br><br>
-<button onclick="calc();" id="calc">Calculate</button>
+<!-- <button onkeyup="calc();" id="calc">Calculate</button> -->
 
 <br>
-<h4 id="result">result</h4>
+<h4 id="result" class="displaynone">result</h4>
+
+
+
+<table class="table width50">
+  <tbody>
+    <tr>
+      <td id="rc" class="width20">  </td>
+      <td id="ib" class="width20">  </td>
+      <td id="rl" class="width20">  </td>
+    </tr>
+    <tr>
+      <td class="width20"> <button id="1" onclick="myFunction(rc)">Copy</button>  </td>
+      <td class="width20"> <button id="2" onclick="myFunction(ib)">Copy</button> </td>
+      <td class="width20"> <button id="3" onclick="myFunction(rl)">Copy</button> </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 <script>
 
@@ -28,12 +79,38 @@ var calc = function() {
 	var result = [ base, a, ( a + (a*percentage)) ];
 
 	resultText.innerHTML = result.toString().replaceAll(',','<br>');
+	
+	updateDate(result);
+}
+
+var updateDate = function(costFix){
+	var rc = document.getElementById("rc");
+	var ib = document.getElementById("ib");
+	var rl = document.getElementById("rl");
+
+	rc.innerHTML = costFix[0].toFixed(2);
+	ib.innerHTML = costFix[1].toFixed(2);
+	rl.innerHTML = costFix[2].toFixed(2);
+}
+
+function myFunction(event) {
+  //var copyText = document.getElementById(event);
+
+//  copyText.select();
+ // copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard.writeText(Number.parseFloat(event.innerHTML));
+
+  console.log(event)
 }
 
 
-btn = document.getElementById('calc')
-btn.click = calc;
 
+//btn = document.getElementById('calc')
+//btn.click = calc;
+
+fld = document.getElementById('base')
+fld.onkeyup = calc
 
 </script>
 </center>
